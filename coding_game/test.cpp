@@ -1,15 +1,10 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-
-
 int main()
 {
-
-  string liczby = " 111 111";
-  string *str_arr = new string [liczby.length()];
+  string *str_arr = new string [2];
 
   str_arr[0][0] = 'a';
   str_arr[0][1] = 'a';
