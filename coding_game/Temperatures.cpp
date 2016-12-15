@@ -44,9 +44,10 @@ int main()
     p_arr++;
   }
 
-
   cout << endl << endl;
-
+  
+  delete [] str_arr;
+    
   cin.get();
   return 0;
 }
