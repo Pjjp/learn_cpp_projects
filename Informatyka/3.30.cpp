@@ -88,12 +88,6 @@ main()
     wypisz(T, m, n);
     cout << "wielka kupa gowna";
   
-        
-    
-    
-   
-    
-    
  
     for(int i=0;i<m;++i) delete []T[m];
     delete []T;
