@@ -49,8 +49,8 @@ int main()
   cout << endl << endl;
   
   delete [] str_arr;
-  delete p_licz;
-  delete p_arr;
+  p_licz = NULL;
+  p_arr = NULL;
   
   cin.get();
   return 0;
