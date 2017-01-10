@@ -32,10 +32,12 @@ int main()
       *p_arr = *p_licz;
       p_arr++; p_licz++;
     }
+    p_arr = NULL;
     p_arr = &str_arr[++x][0];
     p_licz++;
   }
-
+	
+  p_arr = NULL;	
   p_arr = &str_arr[0][0];
 
   while(*p_arr)
