@@ -1,0 +1,4 @@
+{} - your somethink
+
+g++ {name of file}.cpp -o {name of output file}
+./{name of output file}
