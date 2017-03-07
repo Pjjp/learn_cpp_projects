@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	
+	<body>
+			<form>
+				<div class="form-group">
+					<label>Imię:</label>
+					<input class="form-control" type="text" name="name"></input>
+					<label>Wiek:</label>
+					<input class="form-control" type="text" name="age"></input>
+				</div>
+				<button class="btn btn-success" name="save">zapisz</button>
+			</form>
+		</div>
+		
+		<script type="text/javascript">
+				$('[name=save]').on('click', function(e){
+				e.preventDefault();
+				var name = $('[name=name]').val();
+				var age = $('[name=age]').val();
+				console.log(name, age);
+				});
+		</script>
+		
+	</body>
+</html>
