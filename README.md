@@ -1,2 +1,2 @@
-# lern_cpp_projects
-short c++ exercises
+# learn_projects
+short learn somethink exercises
