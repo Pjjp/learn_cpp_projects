@@ -1,0 +1,74 @@
+
+
+package umcs_piotr_paszko;
+
+
+import java.math.BigDecimal;
+import javax.swing.JOptionPane;
+
+public class UMCS_Piotr_Paszko {
+
+    public static void main(String[] args) {
+      /*
+        System.out.println("podaj imie");
+      Scanner odczyt = new Scanner(System.in);
+      String imie = odczyt.next();
+      System.out.println(imie);
+   */
+        
+      /*  String imie = JOptionPane.showInputDialog("podaj swoje imie: ");
+        JOptionPane.showMessageDialog(null, "witaj: " +imie);*/
+        
+        
+      /*  String liczba1str = JOptionPane.showInputDialog("podaj 1 liczbe: ");
+        String operator = JOptionPane.showInputDialog("podaj operator: ");
+        String liczba2str = JOptionPane.showInputDialog("podaj 2 liczbe: ");
+       
+        BigDecimal liczba1 = new BigDecimal(liczba1str);
+        BigDecimal liczba2 = new BigDecimal(liczba2str);
+        
+        BigDecimal wynik;
+        
+        switch(operator)
+        {
+            case "+":
+                wynik = liczba1.add(liczba2);
+            break;
+                
+            case "-":
+                wynik = liczba1.min(liczba2);
+            break; 
+                
+            default: wynik = new BigDecimal(0);
+                
+        }
+        
+        JOptionPane.showMessageDialog(null, wynik);*/
+        
+        
+       /* String[] tab = new String[3];
+        tab[0] = "1";
+        tab[1] = "2";
+        tab[2] = "3";
+        for(int i=0; i <tab.length; i++)
+        {
+            System.out.println(tab[i]);
+        }*/
+        
+        String[] tab = new String[3];
+        tab[0] = "1";
+        tab[1] = "2";
+        tab[2] = "3";
+        for(String i: tab)
+        {
+            System.out.println(i);
+        }
+
+// int a =2;
+     // Integer aa = 2;
+      //BigDecimal big00 = new BigDecimal(12);
+      
+      
+    }
+    
+}
