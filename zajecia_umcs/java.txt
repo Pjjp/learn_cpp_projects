@@ -1,5 +1,7 @@
 
 
+
+
 package umcs_piotr_paszko;
 
 
@@ -55,7 +57,7 @@ public class UMCS_Piotr_Paszko {
             System.out.println(tab[i]);
         }*/
         
-        String[] tab = new String[3];
+      /*  String[] tab = new String[3];
         tab[0] = "1";
         tab[1] = "2";
         tab[2] = "3";
@@ -63,6 +65,21 @@ public class UMCS_Piotr_Paszko {
         {
             System.out.println(i);
         }
+      */
+        
+       /* List<String> lista = new ArrayList<>();
+        lista.add("cos");
+        lista.add("cos");
+        lista.add("cos");
+        lista.add("cos");
+        
+        for(int i = 0; i < lista.size(); i++){
+            String element = lista.get(i);
+            System.out.println(element);
+        }*/
+        
+        Map<String, String> mapa = new HashMap<>();
+        
 
 // int a =2;
      // Integer aa = 2;
@@ -72,3 +89,4 @@ public class UMCS_Piotr_Paszko {
     }
     
 }
+
