@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include <cmath>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -20,61 +21,60 @@ bool namber_or_no(char znak) {
 		return false;
 }
 
-void Sortowanie(int tab[], int size) {
+int Sortowanie(int tab[], int size) {
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size - 1; j++) {
 			if (abs(tab[j]) > abs(tab[j + 1]))
 				swap(tab[j], tab[j + 1]);
 		}
 	}
-	for (int i = 0; i < size; i++) {
-			for (int j = 0; j < size - 1; j++) {
-				cout << tab[j] << endl;
-			}
-		}
+	return tab[0];
 }
 
-int main() {
-	int x = 0, y = 0, nr = 0;
-	string liczby = " 243 4 1 -12";
-	string strTab[liczby.length()];
-	int *iLiczby = new int[liczby.length()];
-	int *startILiczby = &iLiczby[0];
+int main()
+{
+    int n; // the number of temperatures to analyse
+    int x = 0, y = 0, nr = 0;
+	string temps; // the n temperatures expressed as integers ranging from -273 to 5526
 
-	for (int var1 = 0; var1 < liczby.length() + 1; ++var1) {
-		if (namber_or_no(liczby[var1]) == true
-				&& liczby[var1 - 1] == (char) 32) {
-			x = var1;
-		}
-		if (namber_or_no(liczby[var1]) != true) {
-			y = var1;
-			strTab[nr] = liczby.substr(x, y - x);
-			nr++;
-		}
-		if (var1 == NULL) {
-			y = var1;
-			strTab[nr] = liczby.substr(x, y - x);
-		}
-	}
-	for (int var = 0; var < liczby.length(); ++var) {
-		if (strTab[var].empty() == false) {
-			*iLiczby = stoi(strTab[var]);
-			iLiczby++;
-		}
-	}
-	iLiczby = startILiczby;
-	int size=0;
-	while (*iLiczby) {
-		cout << *iLiczby << endl;
-		iLiczby++;
-		size++;
-	}
-	cout << "------------------------------------" << endl;
+	cin >> n; cin.ignore();
+    getline(cin, temps);
+	string strTab[temps.length()];
+	int *itemps = new int[temps.length()];
+	int *startItemps = &itemps[0];
 
-	iLiczby = startILiczby;
-	Sortowanie(iLiczby, size);
+    for (int var1 = 0; var1 < temps.length() + 1; ++var1) {
+    		if (namber_or_no(temps[var1]) == true
+    				&& temps[var1 - 1] == (char) 32) {
+    			x = var1;
+    		}
+    		if (namber_or_no(temps[var1]) != true) {
+    			y = var1;
+    			strTab[nr] = temps.substr(x, y - x);
+    			nr++;
+    		}
+    		if (var1 == NULL) {
+    			y = var1;
+    			strTab[nr] = temps.substr(x, y - x);
+    		}
+    	}
+    	for (int var = 0; var < temps.length(); ++var) {
+    		if (strTab[var].empty() == false) {
+    			*itemps = stoi(strTab[var]);
+    			itemps++;
+    		}
+    	}
+    	itemps = startItemps;
+    	int size=0;
+    	while (*itemps) {
+    		itemps++;
+    		size++;
+    	}
 
-	delete iLiczby;
-	cin.get();
-	return 0;
+    	itemps = startItemps;
+    	cout << Sortowanie(itemps, size) << endl;
+
+    	delete itemps;
+    	cin.get();
+    	return 0;
 }
