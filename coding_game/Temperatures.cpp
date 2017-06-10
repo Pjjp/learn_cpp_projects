@@ -79,7 +79,6 @@ int main() {
 	itemps = startItemps;
 	if(smalest_value(itemps, size)!=0){
 		answear=to_string(smalest_value(itemps, size));
-		cout << "yes";
 	}
 	cout << answear << endl;
 
