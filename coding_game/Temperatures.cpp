@@ -54,6 +54,7 @@ int main() {
 	int size = 0;
 	string answear ="0";
 
+	if(temps.length()>0){
 	for (int var1 = 0; var1 < temps.length() + 1; ++var1) {
 		if ((namber_or_no(temps[var1]) == true || temps[var1] == (char) 45)
 				&& temps[var1 - 1] == (char) 32) {
@@ -79,6 +80,7 @@ int main() {
 	itemps = startItemps;
 	if(smalest_value(itemps, size)!=0){
 		answear=to_string(smalest_value(itemps, size));
+	}
 	}
 	cout << answear << endl;
 
