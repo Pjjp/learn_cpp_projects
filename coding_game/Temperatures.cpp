@@ -30,12 +30,12 @@ int smalest_value(int tab[], int size) {
 	}
 	for (int j = 0; j < size - 2; j++) {
 		if (tab[0] < 0 && abs(tab[0]) == tab[j + 1]) {
-			swap(tab[0], tab[j+1]);
+			swap(tab[0], tab[j + 1]);
 		}
 	}
 	for (int j = 0; j < size - 1; j++) {
 		if (tab[j] == 0)
-		swap(tab[0], tab[j]);
+			swap(tab[0], tab[j]);
 	}
 	return tab[0];
 }
@@ -52,35 +52,39 @@ int main() {
 	int *itemps = new int[temps.length()];
 	int *startItemps = &itemps[0];
 	int size = 0;
-	string answear ="0";
+	string answear = "0";
 
-	if(temps.length()>0){
-	for (int var1 = 0; var1 < temps.length() + 1; ++var1) {
-		if ((namber_or_no(temps[var1]) == true || temps[var1] == (char) 45)
-				&& temps[var1 - 1] == (char) 32) {
-			x = var1;
+	if (temps.length() > 0) {
+		for (int var1 = 0; var1 < temps.length() + 1; ++var1) {
+			if (namber_or_no(temps[var1]) == true
+					&& namber_or_no(temps[var1 - 1])==false) {
+				x = var1;
+			}
+			if (namber_or_no(temps[var1]) == false && namber_or_no(temps[var1-1]) == true) {
+				y = var1;
+				strTab[nr] = temps.substr(x, y - x);
+				nr++;
+			}
+			if ((temps[var1-1]) == (char) 45 && (temps[var1]) == (char) 45) {
+				x = var1;
+			}
+			if (var1 == NULL) {
+				y = var1;
+				strTab[nr] = temps.substr(x, y - x);
+			}
 		}
-		if (namber_or_no(temps[var1]) != true) {
-			y = var1;
-			strTab[nr] = temps.substr(x, y - x);
-			nr++;
+		for (int var = 0; var < temps.length(); ++var) {
+			if (strTab[var].empty() == false) {
+				*itemps = stoi(strTab[var]);
+				//cout << strTab[var] << endl;
+				itemps++;
+				size++;
+			}
 		}
-		if (var1 == NULL) {
-			y = var1;
-			strTab[nr] = temps.substr(x, y - x);
+		itemps = startItemps;
+		if (smalest_value(itemps, size) != 0) {
+			answear = to_string(smalest_value(itemps, size));
 		}
-	}
-	for (int var = 0; var < temps.length(); ++var) {
-		if (strTab[var].empty() == false) {
-			*itemps = stoi(strTab[var]);
-			itemps++;
-			size++;
-		}
-	}
-	itemps = startItemps;
-	if(smalest_value(itemps, size)!=0){
-		answear=to_string(smalest_value(itemps, size));
-	}
 	}
 	cout << answear << endl;
 
