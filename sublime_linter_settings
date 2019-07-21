@@ -1,0 +1,18 @@
+{
+    "highlights.demote_while_editing": "all",
+    "highlights.time_to_idle": 2,
+
+    "linters": {
+        // The name of the linter you installed
+        "pylint": {
+
+            "disable": false,
+            "filter_errors": [
+                "C0111", 
+                "C0103",
+                "R0201",
+                "W0201",
+            ],
+        }
+    },
+}
